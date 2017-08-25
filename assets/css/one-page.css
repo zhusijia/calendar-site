@@ -269,7 +269,7 @@ ul.categories-list>li>a:hover {
 }
 
 .landing-title .filters {
-	padding-top: 7px;
+    padding-top: 7px;
     float: right;
 }
 
@@ -309,8 +309,137 @@ ul.categories-list>li>a:hover {
     opacity: 0.79;
 }
 
-.clearfix:before, .clearfix:after{
-	display: table;
+.clearfix:before,
+.clearfix:after {
+    display: table;
     content: "";
     line-height: 0;
+}
+
+.card .thumbnail {
+    margin-bottom: 0;
+}
+
+.card .details {
+    top: 0;
+    display: block;
+    height: 60px;
+    padding: 10px 15px 0;
+    position: absolute;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.authors-container .author {
+    float: left;
+    position: relative;
+    transition: opacity 0.25s;
+    -webkit-transition: opacity 0.25s;
+    z-index: 3;
+}
+
+.card .authors-container {
+    display: inline-block;
+}
+
+.card .authors-container[data-collaborators="2"] {
+    display: inline-block;
+    width: 60px;
+}
+
+.card .author>.account-photo.account-product-owner {
+    border-color: #ff9500;
+}
+
+.card .authors-container>.author>.account-photo {
+    float: left;
+    overflow: hidden;
+    width: 36px;
+    height: 36px;
+}
+
+.authors-container>.author>.account-photo {
+    border-width: 2px;
+    border-style: solid;
+}
+
+.account-photo {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 158, 255, 0.65);
+    border-color: #ccc;
+}
+
+.card-info {
+    padding: 15px;
+    border-radius: 0 0 12px 12px;
+}
+
+.card-info h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.main .breadcrumbs-container {
+    padding: 10px;
+    margin: 20px 0px 40px;
+    background: whitesmoke;
+    border-radius: 4px;
+}
+
+.main .breadcrumbs-container .breadcrumb {
+    display: inline-block;
+    background: transparent;
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+}
+
+.footer-title {
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+input#subscribe_email {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    background-color: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    border-radius: 4px;
+    box-shadow: none;
+    color: #444444;
+    height: 38px;
+    padding: 6px 16px;
+    width: 204px;
+}
+
+.btn-info.btn-fill {
+	margin: 0;
+    background-color: #00BBFF;
+    border-color: #00BBFF;
+    padding-bottom: 8px;
+}
+
+.footer {
+	background-color: #444444;
+}
+
+.footer .overlayer>.container {
+	color: #999999;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.row.support h4 {
+	color: rgb(153, 153, 153);
+}
+
+.footer li,.footer li a{
+	color: #FFFFFF;
+    margin: 5px 0;
 }

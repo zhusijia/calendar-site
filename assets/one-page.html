@@ -576,6 +576,22 @@
             </div>
         </div>
     </div>
+
+    <!-- script navbar -->
+    <script type="text/javascript">
+    	$(document).ready(function () {
+    		$(window).on("scroll",function(){
+    			offsetTop = $(".navbar.filter-bar").offset().top;
+    			if(offsetTop > 0){
+    				$(".navbar.filter-bar").removeClass("navbar-transparent");
+    				$(".navbar.filter-bar").addClass("filled")
+    			}else{
+    				$(".navbar.filter-bar").addClass("navbar-transparent");
+    				$(".navbar.filter-bar").removeClass("filled")
+    			}
+    		})
+    	})
+    </script>
 </body>
 
 </html>

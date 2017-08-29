@@ -145,6 +145,11 @@
     position: relative;
 }
 
+.filter-bar.filled .navbar-nav>li>a:not(.btn):hover {
+    background-color: rgba(43, 43, 43, 0.1);
+    color: #555555;
+}
+
 .dropdown-toggle p {
     // color: #FFFFFF;
 }

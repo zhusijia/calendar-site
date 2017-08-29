@@ -542,5 +542,22 @@ input#subscribe_email {
 }
 
 .fail .col-md-4.detail-description {
-	margin: 25px 0;
+    margin: 25px 0;
+}
+
+.card[data-no-border="true"] {
+    background: transparent;
+    box-shadow: none;
+}
+
+.card[data-no-border="true"] .thumbnail {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+.card[data-no-border="true"] .thumbnail img {
+    width: 100%;
+    box-shadow: 0 29px 32px -20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
 }

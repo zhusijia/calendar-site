@@ -31,14 +31,21 @@
     background-color: rgba(255, 255, 255, 0.97);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.18);
     padding-top: 0;
+    padding-bottom: 0px;
 }
 
 .filter-bar {
     -webkit-transition: all 0.5s;
 }
 
-.filter-bar.filled .navbar-nav>li>a {
-	color: #555555;
+.filter-bar.filled .navbar-nav>li>a,
+.filter-bar.filled .navbar-header .navbar-brand p {
+    color: #555555;
+}
+
+
+.filter-bar.filled .container {
+    padding-top: 10px;
 }
 
 .navbar .notification {
@@ -77,7 +84,7 @@
     font-size: 18px;
     margin: 5px 10px;
     color: #FFFFFF;
-    line-height: 20px;
+    line-height: 40px;
 }
 
 .filter-bar .navbar-nav>li>a:hover {
@@ -155,10 +162,12 @@
     font-size: 46px;
     margin-bottom: 20px;
     color: #FFFFFF;
+    letter-spacing: 4px;
 }
 
 .section-header.gift-offer p {
     color: #FFFFFF;
+    letter-spacing: 2px;
 }
 
 .form-search .form-control-search {
@@ -309,12 +318,20 @@ ul.categories-list>li>a:hover {
 }
 
 .filters fieldset .btn-default {
-    padding: 9px 14px;
+    padding: 5px 12px;
     margin: 2px 0;
-    color: #333333;
+    color: #666666;
     background: rgba(0, 0, 0, 0);
     border: 1px solid rgb(153, 153, 153);
     box-shadow: none;
+}
+
+.filters fieldset .btn-default:hover,
+.filters fieldset .btn-default:focus,
+.filters fieldset .btn-default:active {
+    border-color: #999999;
+    background-color: rgba(0, 0, 0, 0);
+    color: #333333;
 }
 
 .bth-round {
@@ -457,4 +474,64 @@ input#subscribe_email {
 .footer li a {
     color: #FFFFFF;
     margin: 5px 0;
+}
+
+.footer .overlayer {
+    background-color: rgba(27, 27, 27, 0.7);
+}
+
+.footer .footer-brand {
+    color: #FFFFFF;
+    display: inline-block;
+}
+
+.footer .footer-brand .logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid #333333;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.footer .footer-brand .logo img {
+    width: 45px;
+    height: 45px;
+}
+
+.footer .footer-brand span {
+    font-size: 16px;
+    margin: 5px 0 25px;
+    color: #FFFFFF;
+    display: block;
+}
+
+.btn-social.btn-round {
+    padding: 9px 11px;
+}
+
+.social-area .btn {
+    margin: 0 5px;
+    color: #FFF;
+    background: transparent;
+    border: 1px solid #FFF;
+}
+
+.social-area .btn:hover {
+    background: transparent;
+    color: #999999;
+}
+
+.btn-social {
+    opacity: 0.85;
+}
+
+.btn-round {
+    border-width: 1px;
+    border-radius: 30px !important;
+}
+
+.footer .credits {
+    padding: 25px 0 15px;
+    text-align: center;
 }

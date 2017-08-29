@@ -540,3 +540,7 @@ input#subscribe_email {
     padding: 25px 0 15px;
     text-align: center;
 }
+
+.fail .col-md-4.detail-description {
+	margin: 25px 0;
+}

@@ -11,6 +11,25 @@
 	<script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./js/material.min.js"></script>
+	<!-- script navbar -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			function toggleNavbar() {
+				var offsetTop = $(".navbar.filter-bar").offset().top;
+				if(offsetTop > 0){
+					$(".navbar.filter-bar").removeClass("navbar-transparent");
+					$(".navbar.filter-bar").addClass("filled")
+				}else{
+					$(".navbar.filter-bar").addClass("navbar-transparent");
+					$(".navbar.filter-bar").removeClass("filled")
+				}
+			}
+			toggleNavbar();
+			$(window).on("scroll",function(){
+				toggleNavbar();
+			})
+		})
+	</script>
 </head>
 
 <body class="steedos-calendar">
@@ -42,7 +61,7 @@
 			</div>
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav navbar-right" data-no-turbolink="">
-					<li class="dropdown dropdown-categories" data-no-turbolink="">
+					<!-- <li class="dropdown dropdown-categories" data-no-turbolink="">
 						<a href="" class="dropdown-toggle" data-toggle="dropdown">
 							<i class="icon-th-large icon-2x">
 							</i>
@@ -51,7 +70,6 @@
 								<span class="caret"></span>
 							</p>
 						</a>
-						<!-- 下拉菜单 -->
 						<ul class="dropdown-menu">
 							<li>
 								<a href="/bootstrap-themes">
@@ -119,33 +137,17 @@
 								</a>
 							</li>
 						</ul>
-					</li>
+					</li> -->
 					<li class="big-bundle" data-no-turbolink="">
-						<a href="/product/buy/bundle/?utm_campaign=big-bundle&amp;utm_medium=navbar&amp;utm_source=tim">
+						<a href="#price">
 							<i class="icon-gift icon-2x"></i>
-							<p>Big Bundle</p>
-							<span class="notification-bubble notification-inverted">New</span>
+							<p>报价</p>
 						</a>
 					</li>
 					<li>
 						<a href="http://blog.creative-tim.com">
 							<i class="icon-align-left icon-2x"></i>
-							<p>Blog</p>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:void(0)" onclick="openLoginModal();" role="button" data-toggle="modal">
-							<i class="icon-male-sign-alt icon-2x"></i>
-							<p>Login/Register</p>
-						</a>
-					</li>
-					<li class="noty-cart">
-						<a href="/checkout" data-cart="0">
-							<i class="icon-shopping-cart icon-2x"></i>
-							<span class="notification-bubble hidden" id="products-in-cart">
-								0
-							</span>
-							<p>Your Cart </p>
+							<p>帮助</p>
 						</a>
 					</li>
 				</ul>
@@ -155,7 +157,7 @@
 	<!-- picture and introduction -->
 	<div class="section section-header section-md section-all-products gift-offer">
 		<div class="parallax-background parallax-active activated">
-			<img src="./img/banner.jpg" alt="Gallery" style="top: 0px;">
+			<img src="./img/bg27.jpg" alt="Gallery" style="top: 0px;">
 			<div class="filter  filter-black "></div>
 		</div>
 		<a href="#giftOfferModal" data-toggle="modal">
@@ -182,21 +184,12 @@
 		<div class="info">
 			<h1>华炎会议管理系统</h1>
 			<p>
-				华炎会议管理系统存在的价值就是帮您解决现实中会议管理上的困扰，我们的初衷是让您更加省事省力省心!
+				会议邀请，实时送达<br>
+				会议安排，游刃有余
 			</p>
-			<!-- <div itemscope="" itemtype="http://schema.org/WebSite">
-				<meta itemprop="url" content="https://www.creative-tim.com/">
-				<form class="" itemprop="potentialAction" itemscope="itemscope" itemtype="http://schema.org/SearchAction" action="/search" accept-charset="UTF-8" method="get">
-					<input name="utf8" type="hidden" value="✓">
-					<div class="form-group form-search">
-						<meta itemprop="target" content="https://www.creative-tim.com/search?q={q}">
-						<input type="text" name="q" id="q" class="form-control form-control-search" placeholder="Search here..." itemprop="query-input">
-						<button type="submit" name="button" class="btn btn-default btn-round btn-submit">
-							<i class="ion ion-ios-search-strong"></i>
-						</button>
-					</div>
-				</form>
-			</div> -->
+			<div class="col text-center">
+				<a href="examples/login-page.html" class="btn btn-simple btn-round btn-white btn-lg btn-login" target="_blank">注册登录</a>
+			</div>
 		</div>
 	</div>
 	<!-- main description -->
@@ -291,36 +284,41 @@
 		<div class="container">
 			<div class="row fail" id="mix-container">
 				<!-- title -->
-				<div class="col-md-10 col-md-offset-1">
+				<div class="container">
 					<div class="landing-title">
 						<h2 class="title">系统简介</h2>
-						<!-- <div class="filters">
-							<fieldset class="btn-prices">
-								<h6>Sort Themes:</h6>
-								<div class="dropdown pull-right">
-									<button class="filter btn-default btn-round" type="button" data-toggle="dropdown">
-										Default
-										<span class="caret"></span>
-									</button>
-									<ul class="dropdown-menu">
-										<li><a href="/bootstrap-themes/one-page-template?direction=asc&amp;sort=product_order">Default</a></li>
-										<li><a href="/bootstrap-themes/one-page-template?direction=desc&amp;sort=created_at">Newest Items</a></li>
-										<li><a href="/bootstrap-themes/one-page-template?direction=asc&amp;sort=price">Price: low to high</a></li>
-										<li><a href="/bootstrap-themes/one-page-template?direction=desc&amp;sort=price">Price: high to low</a></li>
-										<li><a href="/bootstrap-themes/one-page-template?direction=desc&amp;sort=number_of_downloads">Most Downloaded</a></li>
-									</ul>
-								</div>
-							</fieldset>
-						</div> -->
 						<div class="clearfix"></div>
 					</div>
 				</div>
 				<!-- picture -->
 				<div class="row">
-					<div class="col-md-10 col-md-offset-1">
+					<div class="container">
 						<!-- 1st picture -->
 						<div class="row">
-							<div class="col-md-8">
+							<div class="col-md-5 col-sm-12 detail-description">
+								<h2 class="legend">会议信息实时掌握</h2>
+								<p class="description">
+									华炎会议管理系统为您提供了消息推送功能，不论是在办公室还是出门在外，您都可以实时收到会议邀请的通知，同时一旦您的会议邀请信息发生变化，我们也会在第一时间通知您，避免遗漏重要的会议通知。
+								</p>
+							</div>
+							<div class="col-md-6 col-sm-12 col-md-offset-1">
+								<div class="card" data-no-border="true">
+									<div class="thumbnail">
+										<img src="./img/hy3.jpg" data-retina="">
+										<a href="" class="thumb-cover"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 2nd picture -->
+						<div class="row picture">
+							<div class="col-md-5 col-sm-12 col-md-offset-1 detail-description" style="float: right;">
+								<h2 class="legend">在线进行会议邀约</h2>
+								<p class="description">
+									华炎会议管理系统为办会人员和参会人员提供了专业的会议管理在线平台，实现会议的在线邀约，参会人员的统一管理等功能，只需要几步简单的操作，就能将会议的信息通知给所有参会人员，适用于各种行业的会议活动使用。
+								</p>
+							</div>
+							<div class="col-md-6 col-sm-12">
 								<div class="card" data-no-border="true">
 									<div class="thumbnail">
 										<img src="./img/hy1.png" data-retina="">
@@ -328,48 +326,16 @@
 									</div>
 								</div>
 							</div>
-
-							<div class="col-md-4 detail-description">
-								<h4 class="legend">在线进行会议邀约</h4>
-								<p class="description">
-									华炎会议管理系统为办会人员和参会人员提供了专业的会议管理在线平台，实现会议的在线邀约，参会人员的统一管理等功能，只需要几步简单的操作，就能将会议的信息通知给所有参会人员，适用于各种行业的会议活动使用。
-								</p>
-								<!-- <div class="row" data-no-turbolink="">
-									<div class="col-md-5">
-										<h5 class="subtitle">What is in Demo?</h5>
-										<ul class="list-unstyled">
-											<li>Components · <b>60</b> </li>
-											<li>Plugins · <b>2</b></li>
-											<li>Examples Pages · <b>3</b></li>
-											<li>-</li>
-											<li>-</li>
-											<li>-</li>
-										</ul>
-									</div>
-									<div class="col-md-6 col-md-offset-1">
-										<h5 class="subtitle">What is in PRO Version?</h5>
-										<ul class="list-unstyled">
-											<li>Components · <b>1000</b></li>
-											<li>Plugins · <b>7</b></li>
-											<li>Example Pages · <b>11</b></li>
-											<li>+ Documentation</li>
-											<li>+ SASS Files</li>
-											<li>+ Photoshop Files</li>
-										</ul>
-									</div>
-									<a class="btn btn-new btn-fill btn-round btn-default" href="/product/material-kit-pro">Upgrade to PRO</a>
-								</div> -->
-							</div>
 						</div>
-						<!-- 2nd picture -->
+						<!-- 3rd picture -->
 						<div class="row">
-							<div class="col-md-4 detail-description">
-								<h4 class="legend">会议室的合理分配</h4>
+							<div class="col-md-5 col-sm-12 detail-description">
+								<h2 class="legend">会议室的合理分配</h2>
 								<p class="description">
 									华炎会议管理系统着手解决传统会议安排经常遇到的会议室冲突等尴尬情景。借助信息化手段和先进的管理理念，对会议室的使用进行规范化、实时化管理，用户可以轻松的查阅到会议室的使用情况，避免了会议室使用冲突的发生，同时也提高了会议室的使用效率，节省办会人员的时间。
 								</p>
 							</div>
-							<div class="col-md-8">
+							<div class="col-md-6 col-sm-12 col-md-offset-1">
 								<div class="card" data-no-border="true">
 									<div class="thumbnail">
 										<img src="./img/hy2.jpg" data-retina="">
@@ -378,21 +344,130 @@
 								</div>
 							</div>
 						</div>
-						<!-- 3rd picture -->
-						<div class="row">
-							<div class="col-md-8">
-								<div class="card" data-no-border="true">
-									<div class="thumbnail">
-										<img src="./img/hy3.jpg" data-retina="">
-										<a href="" class="thumb-cover"></a>
-									</div>
+					</div>
+					<!-- End div col-md-10 -->
+				</div>
+				<!-- End div row -->
+			</div>
+			<hr style="margin-bottom: -10px;border-color: #999;">
+			<a name="price"></a>
+			<div class="row fail">
+				<!-- title -->
+				<div class="container">
+					<div class="landing-title">
+						<h2 class="title">请选择适合您的版本</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<!-- pricing -->
+				<div class="row">
+					<div class="container">
+						<div class="col-md-4">
+							<div class="card card-pricing card-background card-raised" style="background-image: url('./img/bg27.jpg')">
+								<div class="card-block">
+									<h6 class="category">Developer License</h6>
+									<h1 class="card-title">
+										<small>¥</small>279
+									</h1>
+									<ul>
+										<li>Everything in Personal</li>
+										<li>
+											<b>+</b> Create
+											<b>Multiple Websites</b>
+										</li>
+										<li>
+											<b>+</b> Sell to
+											<b>Multiple Clients</b>
+										</li>
+										<li>
+											<b>+</b> Can
+											<b> Charge Customers</b>
+										</li>
+										<li>
+											<b>+</b> Use in
+											<b> Commercial Projects</b>
+										</li>
+										<li>
+											<b>+</b> Use in
+											<b> SaaS Projects</b>
+										</li>
+									</ul>
+									<a href="https://www.creative-tim.com/buy/now-ui-kit-pro?license=2" class="btn btn-primary btn-round">
+										Buy Now!
+									</a>
 								</div>
 							</div>
-							<div class="col-md-4 detail-description">
-								<h4 class="legend">会议信息实时掌握</h4>
-								<p class="description">
-									华炎会议管理系统为您提供了消息推送功能，不论是在办公室还是出门在外，您都可以实时收到会议邀请的通知，同时一旦您的会议邀请信息发生变化，我们也会在第一时间通知您，避免遗漏重要的会议通知。
-								</p>
+						</div>
+						<div class="col-md-4">
+							<div class="card card-pricing card-background card-raised" style="background-image: url('./img/bg27.jpg')">
+								<div class="card-block">
+									<h6 class="category">Developer License</h6>
+									<h1 class="card-title">
+										<small>¥</small>279
+									</h1>
+									<ul>
+										<li>Everything in Personal</li>
+										<li>
+											<b>+</b> Create
+											<b>Multiple Websites</b>
+										</li>
+										<li>
+											<b>+</b> Sell to
+											<b>Multiple Clients</b>
+										</li>
+										<li>
+											<b>+</b> Can
+											<b> Charge Customers</b>
+										</li>
+										<li>
+											<b>+</b> Use in
+											<b> Commercial Projects</b>
+										</li>
+										<li>
+											<b>+</b> Use in
+											<b> SaaS Projects</b>
+										</li>
+									</ul>
+									<a href="https://www.creative-tim.com/buy/now-ui-kit-pro?license=2" class="btn btn-primary btn-round">
+										Buy Now!
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="card card-pricing card-background card-raised" style="background-image: url('./img/bg27.jpg')">
+								<div class="card-block">
+									<h6 class="category">Developer License</h6>
+									<h1 class="card-title">
+										<small>¥</small>279
+									</h1>
+									<ul>
+										<li>Everything in Personal</li>
+										<li>
+											<b>+</b> Create
+											<b>Multiple Websites</b>
+										</li>
+										<li>
+											<b>+</b> Sell to
+											<b>Multiple Clients</b>
+										</li>
+										<li>
+											<b>+</b> Can
+											<b> Charge Customers</b>
+										</li>
+										<li>
+											<b>+</b> Use in
+											<b> Commercial Projects</b>
+										</li>
+										<li>
+											<b>+</b> Use in
+											<b> SaaS Projects</b>
+										</li>
+									</ul>
+									<a href="https://www.creative-tim.com/buy/now-ui-kit-pro?license=2" class="btn btn-primary btn-round">
+										Buy Now!
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -405,7 +480,7 @@
 				<ol itemscope="" itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">
 					<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 						<a itemprop="item" href="http://www.steedos.com/cn/workflow/" target="_parent">
-								<span itemprop="name">审批王</span>
+								<span itemprop="name">华炎办公</span>
 								</a>
 						<meta itemprop="position" content="1">
 					</li>
@@ -444,7 +519,7 @@
 						<h4>关于华炎会议管理系统</h4>
 						<div class="footer-description">
 				            <span>
-				            	华炎会议管理系统存在的价值就是帮您解决现实中会议管理上的困扰，我们的初衷是让您更加省事省力省心!
+				            	华炎会议管理系统价值就是帮您解决现实中会议管理上的困扰，我们的初衷是让您更加省事省力省心!
 				            </span>
 				        </div>
 					</div>
@@ -456,34 +531,20 @@
 							<div class="logo">
 								<img itemprop="logo" src="./img/logo1.png">
 							</div>
-							<span itemprop="name">审批王</span>
+							<span itemprop="name">华炎办公</span>
 						</a>
 					</div>
 				</div>
 				<div class="row">
 					<div class="credits">
 						© 华炎软件. 保留所有权利.
+						<a class="steedos-rule" href="http://www.steedos.com/cn/legal/terms/">条款与规定</a>
+						<a class="steedos-rule" href="http://www.steedos.com/cn/legal/privacy/">隐私保护</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<!-- script navbar -->
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$(window).on("scroll",function(){
-				offsetTop = $(".navbar.filter-bar").offset().top;
-				if(offsetTop > 0){
-					$(".navbar.filter-bar").removeClass("navbar-transparent");
-					$(".navbar.filter-bar").addClass("filled")
-				}else{
-					$(".navbar.filter-bar").addClass("navbar-transparent");
-					$(".navbar.filter-bar").removeClass("filled")
-				}
-			})
-		})
-	</script>
 </body>
 
 </html>

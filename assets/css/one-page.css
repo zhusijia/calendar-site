@@ -640,7 +640,7 @@ input#subscribe_email {
 }
 
 .card-raised {
-    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 5px 32px 0px rgba(0, 0, 0, 0.25)
 }
 
 .card-pricing.card-background .card-block {
@@ -705,4 +705,109 @@ input#subscribe_email {
 .card-pricing ul li {
     padding: 12px 0;
     border-bottom: 1px solid rgba(136, 136, 136, 0.3);
+}
+
+.section.section-no-padding {
+    padding-bottom: 0;
+    padding: 30px 0;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+.steedos-calendar .section-no-padding .parallax {
+    color: white;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 490px;
+    text-align: center;
+}
+
+.steedos-calendar .parallax {
+    width: 100%;
+    height: 630px;
+    overflow: hidden;
+    display: block;
+    background-size: 100%;
+}
+
+.steedos-calendar .parallax .parallax-background {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.steedos-calendar .parallax .parallax-background img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    vertical-align: middle;
+}
+
+.steedos-calendar .section-no-padding .parallax .info {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 20;
+    top: 150px;
+}
+
+.filter-gradient.blue:after {
+    background: rgba(54, 151, 142, 0.8);
+    background: -moz-radial-gradient(center, ellipse cover, #1e5799 0%, rgba(54, 151, 142, 0.8) 0%, #0C526C 100%, #3d7eaa 100%, #182848 100%, #6e48aa 100%, #6e48aa 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #1e5799), color-stop(0%, rgba(54, 151, 142, 0.8)), color-stop(100%, #0C526C), color-stop(100%, #3d7eaa), color-stop(100%, #182848), color-stop(100%, #6e48aa), color-stop(100%, #6e48aa));
+    background: -webkit-radial-gradient(center, ellipse cover, #1e5799 0%, rgba(54, 151, 142, 0.8) 0%, #0C526C 100%, #3d7eaa 100%, #182848 100%, #6e48aa 100%, #6e48aa 100%);
+    background: -o-radial-gradient(center, ellipse cover, #1e5799 0%, rgba(54, 151, 142, 0.8) 0%, #0C526C 100%, #3d7eaa 100%, #182848 100%, #6e48aa 100%, #6e48aa 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #1e5799 0%, rgba(54, 151, 142, 0.8) 0%, #0C526C 100%, #3d7eaa 100%, #182848 100%, #6e48aa 100%, #6e48aa 100%);
+    background: radial-gradient(ellipse at center, #1e5799 0%, rgba(54, 151, 142, 0.8) 0%, #0C526C 100%, #3d7eaa 100%, #182848 100%, #6e48aa 100%, #6e48aa 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(54, 151, 142, 0.8) ', endColorstr='#6e48aa', GradientType=1);
+}
+
+.filter-gradient:after {
+    background-size: 2000px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+    content: "";
+    opacity: .7;
+}
+
+.steedos-calendar .section-no-padding .parallax .info h1 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.steedos-calendar .section-no-padding .parallax .info p {
+    margin-top: 30px;
+    line-height: 28px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.steedos-calendar .section-no-padding .parallax .info a.btn:hover,
+.steedos-calendar .section-no-padding .parallax .info a.btn:focus,
+.steedos-calendar .section-no-padding .parallax .info a.btn:active {
+    color: #888888;
+    background-color: white;
+}
+
+.steedos-calendar .section-no-padding .parallax .info .btn-lg {
+    margin-top: 75px;
+    padding: 14px 80px;
+    font-size: 16px;
+}
+
+.btn-neutral.btn-fill {
+    color: #888888;
+    background-color: white;
+    opacity: 1;
 }

@@ -28,56 +28,58 @@
         $(window).on("scroll", function() {
             toggleNavbar();
         })
+
+        $(".navbar-toggle").on("click",function () {
+        	var target = $(this).data("target");
+			$(target).toggleClass("open");        	
+        })
     })
     </script>
 </head>
 
 <body class="steedos-calendar">
     <!-- nav bar -->
-    <nav class="navbar filter-bar navbar-fixed-top navbar-transparent">
+    <nav class="navbar navbar-toggleable-md fixed-top navbar-transparent" color-on-scroll="500">
         <div class="container">
-            <div class="notification">
-                <div id="notif-message" class="notif-message" style="display: block;" notice-type="success">
-                    <i class="ion ion-ios-telephone"></i>400-820-1612
-                </div>
-            </div>
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+            <div class="navbar-translate">
+                <button class="navbar-toggler navbar-toggler-right navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar"></span>
+                    <span class="navbar-toggler-bar"></span>
+                    <span class="navbar-toggler-bar"></span>
                 </button>
-                <div data-no-turbolink="">
-                    <a href="/cn" class="navbar-brand">
-                        <div class="logo">
-                            <img src="./img/logo1.png" width="60" height="60">
-                        </div>
-                        <p>
-                            <!-- <br> Tim -->
-                            华炎会议管理系统
-                        </p>
-                    </a>
-                </div>
+                <a class="navbar-brand" href="https://www.creative-tim.com">Paper Kit 2</a>
             </div>
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav navbar-right" data-no-turbolink="">
-                    <li class="big-bundle" data-no-turbolink="">
-                        <a href="#price">
-							<i class="icon-gift icon-2x"></i>
-							<p>报价</p>
-						</a>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                            <p class="hidden-lg-up">Twitter</p>
+                        </a>
                     </li>
-                    <li>
-                        <a href="">
-							<i class="icon-align-left icon-2x"></i>
-							<p>帮助</p>
-						</a>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
+                            <i class="fa fa-facebook-square"></i>
+                            <p class="hidden-lg-up">Facebook</p>
+                        </a>
                     </li>
-                    <li>
-                        <a href="/steedos/sign-in">
-							<i class="icon-align-left icon-2x"></i>
-							<p>登录</p>
-						</a>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                            <p class="hidden-lg-up">Instagram</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom" href="https://www.github.com/CreativeTimOfficial/paper-kit" target="_blank">
+                            <i class="fa fa-github"></i>
+                            <p class="hidden-lg-up">GitHub</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="documentation/tutorial-components.html" target="_blank" class="nav-link"><i class="nc-icon nc-book-bookmark"></i> Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.creative-tim.com/product/paper-kit-2-pro?ref=pk2-free-local" target="_blank" class="btn btn-danger btn-round">Upgrade to Pro</a>
                     </li>
                 </ul>
             </div>
@@ -202,8 +204,7 @@
 	            </div>
 	            <div class="info">
 	                <h1>立即免费试用华炎会议管理系统！</h1>
-	                <!-- <p>Beautiful multipurpose bootstrap landing page.</p> -->
-	                <a href="http://www.creative-tim.com/product/awesome-landing-page" class="btn btn-neutral btn-lg btn-fill">注册登录</a>
+	                <a href="/steedos/sign-up" target="_blank" class="btn btn-neutral btn-lg btn-fill">注册登录</a>
 	            </div>
 	        </div>
 	    </div>

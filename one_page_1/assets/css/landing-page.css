@@ -64,6 +64,93 @@ body {
   font-family: "Helvetica Neue","Open Sans",Arial,sans-serif;
 }
 
+.card {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin: 25px 0;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 3px;
+  color: rgba(0,0,0, 0.87);
+  background: #fff;
+}
+
+.card-raised {
+  box-shadow: 6px 5px 32px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card-background {
+  background-position: center center;
+  background-size: cover;
+}
+
+.card-pricing.card-background .card-block {
+  padding: 1.25rem;
+  position: relative;
+  z-index: 2;
+  min-height: 370px;
+  // max-width: 530px;
+  text-align: center;
+}
+
+.card-background.card-pricing .category {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 700;
+}
+
+.card-pricing .card-title.price-title {
+  line-height: 12px;
+  margin-top: 35px;
+}
+
+.card-pricing .card-block h1 {
+  font-size: 49px;
+}
+
+.card-background .card-title {
+  color: #FFFFFF;
+}
+
+.card-pricing ul {
+  list-style: none;
+  padding: 0;
+  max-width: 240px;
+  margin: 10px auto;
+  font-size: 15px;
+}
+
+.card-pricing.card-background ul li {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-pricing ul li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.3);
+}
+
+.pricing-block .card-raised .btn-round {
+  font-size: 15px;
+  padding: 9px 24px;
+  background-color: #9c27b0;
+  color: #FFFFFF;
+  border: none;
+  margin: 10px 0;
+}
+
+.card-pricing.card-background:after {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+  background-color: rgba(51, 51, 51, 0.9);
+  border-radius: 0.25rem;
+}
+
 a {
   color: #2ca8ff;
 }
@@ -544,8 +631,34 @@ a:focus, a:active {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.navbar-fixed-top.filled {
+  background-color: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.18);
+  padding-top: 0;
+  padding-bottom: 0px;
+}
+
+.navbar-transparent .navbar-nav > li > a {
+  opacity: 1;
+}
+
+.navbar-transparent .navbar-nav > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.navbar-fixed-top.filled .logo-container .brand,.navbar-fixed-top.filled .navbar-nav > li > a{
+  color: #555555;
+}
+
+@media (max-width: 767px) {
+  .navbar-fixed-top.filled .logo-container .brand,.navbar-fixed-top.filled .navbar-nav > li > a {
+    color: #FFFFFF !important;
+  }
+}
+
 .footer {
-  background-color: white;
+  background-color: #444444;
   line-height: 20px;
 }
 .footer nav > ul {
@@ -609,6 +722,65 @@ a:focus, a:active {
 
 .footer-default {
   background-color: whitesmoke;
+}
+
+.footer .overlayer {
+  background-color: rgba(27, 27, 27, 0.7);
+}
+
+.row.support h4 {
+  color: rgb(153, 153, 153);
+  font-size: 18.2px;
+}
+
+.footer li, .footer li a {
+  color: #FFFFFF;
+  margin: 5px 0;
+}
+
+.overlayer .footer-description {
+  color: #FFFFFF;
+}
+
+.footer .footer-brand {
+  color: #FFFFFF;
+  display: inline-block;
+}
+
+.footer .footer-brand .logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.footer .footer-brand .logo img {
+  width: 45px;
+  height: 45px;
+}
+
+.footer .footer-brand span {
+  font-size: 16px;
+  margin: 5px 0 25px;
+  color: #FFFFFF;
+  display: block;
+}
+
+.footer .credits {
+  padding: 25px 0 15px;
+  text-align: center;
+}
+
+.overlayer .credits a.steedos-rule {
+  color: #FFFFFF;
+  padding: 0 8px;
+  border-left: 1px solid #555555;
+  font-size: 13px;
+}
+
+.footer .overlayer>.container {
+  color: #999999;
 }
 
 .btn-social {
@@ -852,9 +1024,9 @@ a:focus, a:active {
     line-height: 20px;
     float: left;
     margin-left: 10px;
-    margin-top: 5px;
-    width: 50px;
-    height: 50px;
+    margin-top: 12px;
+    width: auto;
+    height: auto;
 }
 .logo-container{
     margin-top: 10px;
@@ -863,15 +1035,11 @@ a:focus, a:active {
     width: 100%;
 }
 
-.landing-page1 .container{
-  max-width: 970px;
-} 
-
 .landing-page2 .container{
   max-width: 1170px;
 }
 
- .header-text{
+.header-text{
       text-transform: uppercase;
       font-weight: 200;
       color: #333;
@@ -891,7 +1059,7 @@ a:focus, a:active {
 
 .landing-page .parallax {
   width: 100%;
-  height: 630px;
+  height: 450px;
   overflow: hidden;
   display: block;
   background-size: 100%;
@@ -985,7 +1153,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
 }
 
 .landing-page .footer{
-  padding: 20px 0;
+  padding: 0;
 }
 .landing-page .parallax .parallax-background{
   position: relative;
@@ -1031,7 +1199,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
 }
 
 .landing-page .parallax .description{
-  margin-top: 200px;
+  text-align: center;
+  margin-top: 100px;
   color: white;
   padding: 5px;
 }
@@ -1054,9 +1223,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
 }
 
 .landing-page .parallax .buttons{
+  text-align: center;
   width: 100%;
   display: inline-block;
-  margin-top: 40px;
+  margin-top: 10px;
   }
 
   .landing-page .parallax .buttons h4{
@@ -1070,7 +1240,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
   }
 
   .landing-page .parallax .buttons .btn-simple{
-    font-size: 30px;
+    padding: 12px 39px;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    border-radius: 30px !important;
+    border: 1px solid;
+    margin-top: 30px;
+    font-size: 16px;
+    opacity: 1;
   }
 
 
@@ -1094,15 +1271,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
    .landing-page .section-presentation {
     overflow: hidden;
     width: 100%;
-    min-height: 600px;
+    height: auto;
     margin-top: 30px;
    }
 
    .landing-page .section-presentation img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 600px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 29px 32px -20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
    }
 
    .landing-page .section-presentation .iphone-presentation {
@@ -1123,7 +1301,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
  
    .landing-page .section-no-padding .parallax .info{
     position: absolute;
-    left: 50%;
+    left: 80%;
     -webkit-transform: translateX(-50%);
     -moz-transform:    translateX(-50%);
     -ms-transform:     translateX(-50%);
@@ -1664,7 +1842,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
     height: 100%;
   }
   .landing-page .parallax .description{
-    margin-top: 65px;  }
+    margin-top: 65px;  
+  }
   .landing-page .parallax .buttons{
     margin: 20px 0;
   }
